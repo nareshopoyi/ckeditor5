@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CKEditor 5 – super build </title>
+    <style>
+        body {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CKEditor 5 – super build</h1>
+
+    <div id="classic-editor"></div>
+    <div id='toolbar-container'></div>
+    </div>
+    <script src="../build/ckeditor.js"></script>
+    <script src="../node_modules/@ckeditor/ckeditor5-inspector/build/inspector.js"></script>
+
+    <script>
+        CKEDITOR.ClassicEditor
+            .create(document.querySelector('#classic-editor'), {
+                placeholder: 'Type the content here!'
+            })
+            .then(editor => {
+                const toolbarContainer = document.querySelector('#toolbar-container');
+                toolbarContainer.appendChild(editor.ui.view.toolbar.element);
+                CKEditorInspector.attach(editor);
+            })
+            .catch(err => {
+                console.error(err.stack);
+            });
+    </script>
+
+</body>
+
+</html>
