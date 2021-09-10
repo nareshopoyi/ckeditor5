@@ -17,6 +17,8 @@ import ImageCaptionPlugin from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImgkitUploadAdapterPlugin from './ImageKitUploader';
 import HashButton from './hashButtonPlugin';
 import MentionCustomization from './MentionPlugin';
+import MyList from './ckeditor5-list/src/list'
+
 export class ClassicEditor extends ClassicEditorBase {}
 
 ClassicEditor.builtinPlugins = [
@@ -56,5 +58,19 @@ ClassicEditor.defaultConfig = {
             'numberedList'
         ],
     }, 
+    language: 'en'
+};
+
+export class ListEditor extends ClassicEditorBase {}
+ListEditor.builtinPlugins = [
+    ParagraphPlugin,
+    Mention,
+    MentionCustomization,
+    LinkPlugin,
+    MyList
+];
+
+
+ListEditor.defaultConfig = {
     language: 'en'
 };
