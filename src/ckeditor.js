@@ -2,7 +2,7 @@ import ClassicEditorBase from '@ckeditor/ckeditor5-editor-decoupled/src/decouple
 import ParagraphPlugin from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import AutoformatPlugin from '@ckeditor/ckeditor5-autoformat/src/autoformat';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
-import Mention from '@ckeditor/ckeditor5-mention/src/mention';
+import Mention from './ckeditor5-mention/src/mention';
 import BoldPlugin from '@ckeditor/ckeditor5-basic-styles/src/bold';
 import ItalicPlugin from '@ckeditor/ckeditor5-basic-styles/src/italic';
 import LinkPlugin from '@ckeditor/ckeditor5-link/src/link';
